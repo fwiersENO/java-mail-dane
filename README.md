@@ -15,5 +15,7 @@ Once a DNSSEC-capable dns-server is configured in [DaneConnect](./src/main/java/
 (you will need to update the class to do this), a DANE validation-test can be executed using the commands:
 
     mvn clean verify
+    # Currently valid DANE
     mvn exec:java -Dexec.args="xs4all.nl"
-	
+    # Currenlty failing DANE validation
+    mvn exec:java -Dexec.args="secumailer.eu"
