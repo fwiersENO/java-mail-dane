@@ -43,10 +43,11 @@
 		</dependency>
 		
 		<dependency>
-		  <!-- Should be test scope but required for exec:java -->
+			<!-- Should be test scope but required for exec:java -->
 			<groupId>ch.qos.logback</groupId>
 			<artifactId>logback-classic</artifactId>
 			<version>1.2.3</version>
+			<scope>runtime</scope>
 		</dependency>
 
 		<dependency>
