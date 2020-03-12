@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration>
+<configuration>
+	
+	<property name="SHORT_LOG_PATTERN" value="%d{dd HH:mm:ss.SSS} %-5level %logger{35} - %msg%n%rEx{short}" />
+	<property name="FULL_LOG_PATTERN" value="%d %-5level %logger - %msg%n%rEx" />
+
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>${SHORT_LOG_PATTERN}</pattern>
+		</encoder>
+	</appender>
+	
+	<root level="info">
+     <appender-ref ref="STDOUT"/>
+  </root>
+  <logger name="smtp.wire" level="debug"/>
+  <!-- smtp.wire requires debug value true in application.yml for output -->
+  <logger name="com.enovationgroup" level="debug"/>
+  <logger name="javax.mail" level="info"/>
+  <logger name="com.sun.mail" level="info"/>
+  <logger name="org.xbill.DNS" lvel="info"/>
+</configuration>
