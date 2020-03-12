@@ -47,7 +47,10 @@ public class TransportFactory {
 
         SSLSocketFactory socketFactory;
         SSLContext sslcontext = SSLContext.getInstance(protocol);
-        sslcontext.init(new KeyManager[]{keyManager}, new TrustManager[]{trustManager}, null);
+        sslcontext.init(
+            keyManager == null ? null : new KeyManager[]{keyManager},
+                    trustManager == null ? null : new TrustManager[]{trustManager},
+                            null);
         socketFactory = sslcontext.getSocketFactory();
         return socketFactory;
     }
