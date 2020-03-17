@@ -27,7 +27,7 @@ public class DaneRecord {
         DANE_EE(3);
 
         private final int value;
-        private CertificateUsage(int value) { this.value = value; }
+        CertificateUsage(int value) { this.value = value; }
         public int value() { return value; }
         public static Optional<CertificateUsage> find(int value) {
             return Arrays.stream(CertificateUsage.values()).filter(e -> e.value() == value).findFirst();
