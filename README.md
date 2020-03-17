@@ -20,6 +20,8 @@ Once a DNSSEC-capable dns-server is configured in [DaneConnect](./src/main/java/
     # Currenlty failing DANE validation
     mvn exec:java -Dexec.args="secumailer.eu"
 
+The [TransportFactory](./src/main/java/com/enovationgroup/dane/smtp/TransportFactory.java) class sets a number of connection properties,
+e.g. the mail-port to connect to. Update this class if needed, e.g. to set a bind-address (a.k.a local-address).
 
 ### DNSSEC with unbound in Docker
 
