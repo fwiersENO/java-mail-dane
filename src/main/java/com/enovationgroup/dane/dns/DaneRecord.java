@@ -41,7 +41,7 @@ public class DaneRecord {
         PUBLIC_KEY(1);
 
         private final int value;
-        private Selector(int value) { this.value = value; }
+        Selector(int value) { this.value = value; }
         public int value() { return value; }
         public static Optional<Selector> find(int value) {
             return Arrays.stream(Selector.values()).filter(e -> e.value() == value).findFirst();
@@ -57,7 +57,7 @@ public class DaneRecord {
         SHA_512(2);
 
         private final int value;
-        private MatchingType(int value) { this.value = value; }
+        MatchingType(int value) { this.value = value; }
         public int value() { return value; }
         public static Optional<MatchingType> find(int value) {
             return Arrays.stream(MatchingType.values()).filter(e -> e.value() == value).findFirst();
